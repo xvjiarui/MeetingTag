@@ -8,11 +8,14 @@
 
 /* Begin PBXBuildFile section */
 		9F35EA5B1F136DAE00E9F069 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F35EA5A1F136DAE00E9F069 /* AppDelegate.swift */; };
-		9F35EA5D1F136DAE00E9F069 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F35EA5C1F136DAE00E9F069 /* ViewController.swift */; };
+		9F35EA5D1F136DAE00E9F069 /* MeetingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F35EA5C1F136DAE00E9F069 /* MeetingViewController.swift */; };
 		9F35EA601F136DAE00E9F069 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9F35EA5E1F136DAE00E9F069 /* Main.storyboard */; };
 		9F35EA621F136DAE00E9F069 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9F35EA611F136DAE00E9F069 /* Assets.xcassets */; };
 		9F35EA651F136DAE00E9F069 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9F35EA631F136DAE00E9F069 /* LaunchScreen.storyboard */; };
 		9F35EA701F136DAE00E9F069 /* MeetingTagTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F35EA6F1F136DAE00E9F069 /* MeetingTagTests.swift */; };
+		9F35EA7B1F13746D00E9F069 /* Meeting.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F35EA7A1F13746D00E9F069 /* Meeting.swift */; };
+		9F35EA7D1F13789C00E9F069 /* MeetingTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F35EA7C1F13789C00E9F069 /* MeetingTableViewController.swift */; };
+		9F35EA7F1F13795400E9F069 /* MeetingTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F35EA7E1F13795400E9F069 /* MeetingTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -28,7 +31,7 @@
 /* Begin PBXFileReference section */
 		9F35EA571F136DAE00E9F069 /* MeetingTag.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MeetingTag.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9F35EA5A1F136DAE00E9F069 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		9F35EA5C1F136DAE00E9F069 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		9F35EA5C1F136DAE00E9F069 /* MeetingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeetingViewController.swift; sourceTree = "<group>"; };
 		9F35EA5F1F136DAE00E9F069 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		9F35EA611F136DAE00E9F069 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		9F35EA641F136DAE00E9F069 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -36,6 +39,9 @@
 		9F35EA6B1F136DAE00E9F069 /* MeetingTagTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MeetingTagTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		9F35EA6F1F136DAE00E9F069 /* MeetingTagTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeetingTagTests.swift; sourceTree = "<group>"; };
 		9F35EA711F136DAE00E9F069 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9F35EA7A1F13746D00E9F069 /* Meeting.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Meeting.swift; sourceTree = "<group>"; };
+		9F35EA7C1F13789C00E9F069 /* MeetingTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MeetingTableViewController.swift; sourceTree = "<group>"; };
+		9F35EA7E1F13795400E9F069 /* MeetingTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MeetingTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -78,8 +84,11 @@
 			isa = PBXGroup;
 			children = (
 				9F35EA5A1F136DAE00E9F069 /* AppDelegate.swift */,
-				9F35EA5C1F136DAE00E9F069 /* ViewController.swift */,
+				9F35EA5C1F136DAE00E9F069 /* MeetingViewController.swift */,
+				9F35EA7A1F13746D00E9F069 /* Meeting.swift */,
 				9F35EA5E1F136DAE00E9F069 /* Main.storyboard */,
+				9F35EA7C1F13789C00E9F069 /* MeetingTableViewController.swift */,
+				9F35EA7E1F13795400E9F069 /* MeetingTableViewCell.swift */,
 				9F35EA611F136DAE00E9F069 /* Assets.xcassets */,
 				9F35EA631F136DAE00E9F069 /* LaunchScreen.storyboard */,
 				9F35EA661F136DAE00E9F069 /* Info.plist */,
@@ -201,7 +210,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9F35EA5D1F136DAE00E9F069 /* ViewController.swift in Sources */,
+				9F35EA5D1F136DAE00E9F069 /* MeetingViewController.swift in Sources */,
+				9F35EA7B1F13746D00E9F069 /* Meeting.swift in Sources */,
+				9F35EA7D1F13789C00E9F069 /* MeetingTableViewController.swift in Sources */,
+				9F35EA7F1F13795400E9F069 /* MeetingTableViewCell.swift in Sources */,
 				9F35EA5B1F136DAE00E9F069 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
