@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9F0140FE1F14D80200A50B3B /* TagTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F0140FD1F14D80200A50B3B /* TagTableViewCell.swift */; };
 		9F35EA5B1F136DAE00E9F069 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F35EA5A1F136DAE00E9F069 /* AppDelegate.swift */; };
 		9F35EA5D1F136DAE00E9F069 /* MeetingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F35EA5C1F136DAE00E9F069 /* MeetingViewController.swift */; };
 		9F35EA601F136DAE00E9F069 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9F35EA5E1F136DAE00E9F069 /* Main.storyboard */; };
@@ -29,6 +30,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		9F0140FD1F14D80200A50B3B /* TagTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TagTableViewCell.swift; sourceTree = "<group>"; };
 		9F35EA571F136DAE00E9F069 /* MeetingTag.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MeetingTag.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9F35EA5A1F136DAE00E9F069 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9F35EA5C1F136DAE00E9F069 /* MeetingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeetingViewController.swift; sourceTree = "<group>"; };
@@ -89,6 +91,7 @@
 				9F35EA5E1F136DAE00E9F069 /* Main.storyboard */,
 				9F35EA7C1F13789C00E9F069 /* MeetingTableViewController.swift */,
 				9F35EA7E1F13795400E9F069 /* MeetingTableViewCell.swift */,
+				9F0140FD1F14D80200A50B3B /* TagTableViewCell.swift */,
 				9F35EA611F136DAE00E9F069 /* Assets.xcassets */,
 				9F35EA631F136DAE00E9F069 /* LaunchScreen.storyboard */,
 				9F35EA661F136DAE00E9F069 /* Info.plist */,
@@ -212,6 +215,7 @@
 			files = (
 				9F35EA5D1F136DAE00E9F069 /* MeetingViewController.swift in Sources */,
 				9F35EA7B1F13746D00E9F069 /* Meeting.swift in Sources */,
+				9F0140FE1F14D80200A50B3B /* TagTableViewCell.swift in Sources */,
 				9F35EA7D1F13789C00E9F069 /* MeetingTableViewController.swift in Sources */,
 				9F35EA7F1F13795400E9F069 /* MeetingTableViewCell.swift in Sources */,
 				9F35EA5B1F136DAE00E9F069 /* AppDelegate.swift in Sources */,
@@ -426,6 +430,7 @@
 				9F35EA761F136DAE00E9F069 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		9F35EA771F136DAE00E9F069 /* Build configuration list for PBXNativeTarget "MeetingTagTests" */ = {
 			isa = XCConfigurationList;
@@ -434,6 +439,7 @@
 				9F35EA791F136DAE00E9F069 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

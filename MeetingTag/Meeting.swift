@@ -14,7 +14,7 @@ class Meeting: NSObject, NSCoding {
     
     var title: String
     var photo: UIImage?
-    var tags: [double_t]
+    var tags: [Int]
     
     struct PropertyKey {
         static let title = "title"
@@ -28,7 +28,7 @@ class Meeting: NSObject, NSCoding {
     init(title: String, photo: UIImage?) {
         self.title = title
         self.photo = photo
-        self.tags = [double_t]()
+        self.tags = [Int]()
     }
     
     func encode(with aCoder: NSCoder) {
