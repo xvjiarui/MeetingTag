@@ -14,7 +14,6 @@ class MeetingViewController: UIViewController, UITextFieldDelegate, UIImagePicke
     
     // MARK: Properties
     @IBOutlet weak var meetingTitleTextField: UITextField!
-    
     @IBOutlet weak var photoImageView: UIImageView!
     @IBOutlet weak var saveButton: UIBarButtonItem!
     @IBOutlet weak var timerLabel: UILabel!
@@ -40,9 +39,13 @@ class MeetingViewController: UIViewController, UITextFieldDelegate, UIImagePicke
             navigationItem.title = meeting.title
             meetingTitleTextField.text = meeting.title
             photoImageView.image = meeting.photo
+            tags = meeting.tags
+            startButton.isHidden = true
+            tagButton.isHidden = true
+            endButton.isHidden = true
+            timerLabel.isHidden = true
         }
         updateSaveButtonState()
-        startButton.isHidden = false
         tagButton.isHidden = true
         endButton.isHidden = true
     }
@@ -120,7 +123,7 @@ class MeetingViewController: UIViewController, UITextFieldDelegate, UIImagePicke
             os_log("The save button was not pressed, cancelling", log: OSLog.default, type: .debug)
             return
         }
-        meeting = Meeting(title: meetingTitleTextField.text ?? "", photo: photoImageView.image)
+        meeting = Meeting(title: meetingTitleTextField.text ?? "", photo: photoImageView.image, tags: tags)
     }
     @IBAction func cancel(_ sender: UIBarButtonItem) {
         let isPresentingInAddMeetingMode = presentingViewController is UINavigationController
@@ -153,6 +156,7 @@ class MeetingViewController: UIViewController, UITextFieldDelegate, UIImagePicke
     }
     
     @IBAction func start(_ sender: UIButton) {
+        meetingTitleTextField.resignFirstResponder()
         seconds = 0
         startButton.isHidden = true
         tagButton.isHidden = false

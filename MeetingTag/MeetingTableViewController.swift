@@ -56,9 +56,9 @@ class MeetingTableViewController: UITableViewController {
     //MARK: Private Methods
     private func loadSampleMeetings()
     {
-        let meeting1 = Meeting(title: "Meeting1", photo: UIImage(named: "meal1"))
-        let meeting2 = Meeting(title: "Meeting2", photo: UIImage(named: "meal2"))
-        let meeting3 = Meeting(title: "Meeting3", photo: UIImage(named: "meal3"))
+        let meeting1 = Meeting(title: "Meeting1", photo: UIImage(named: "meal1"), tags: [Int]())
+        let meeting2 = Meeting(title: "Meeting2", photo: UIImage(named: "meal2"), tags: [Int]())
+        let meeting3 = Meeting(title: "Meeting3", photo: UIImage(named: "meal3"), tags: [Int]())
         meetings += [meeting1, meeting2, meeting3]
         
     }

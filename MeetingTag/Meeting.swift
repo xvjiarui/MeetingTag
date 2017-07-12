@@ -19,21 +19,27 @@ class Meeting: NSObject, NSCoding {
     struct PropertyKey {
         static let title = "title"
         static let photo = "photo"
+        static let tags = "tags"
     }
     
     //MARK: Archiving Path
     static let DocumentsDirectory = FileManager().urls(for: .documentDirectory, in: .userDomainMask).first!
     static let ArchiveURL = DocumentsDirectory.appendingPathComponent("meetings")
     
-    init(title: String, photo: UIImage?) {
+    init(title: String, photo: UIImage?, tags: [Int]? ) {
         self.title = title
         self.photo = photo
         self.tags = [Int]()
+        if let initTags = tags
+        {
+            self.tags += initTags
+        }
     }
     
     func encode(with aCoder: NSCoder) {
         aCoder.encode(title, forKey: PropertyKey.title)
         aCoder.encode(photo, forKey: PropertyKey.photo)
+        aCoder.encode(tags, forKey: PropertyKey.tags)
     }
     
     required convenience init?(coder aDecoder: NSCoder)
@@ -43,6 +49,7 @@ class Meeting: NSObject, NSCoding {
             return nil
         }
         let photo = aDecoder.decodeObject(forKey: PropertyKey.photo) as? UIImage
-        self.init(title: title, photo: photo)
+        let tags = aDecoder.decodeObject(forKey: PropertyKey.tags) as? [Int]
+        self.init(title: title, photo: photo, tags: tags)
     }
 }
