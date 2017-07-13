@@ -17,6 +17,7 @@
 		9F35EA7B1F13746D00E9F069 /* Meeting.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F35EA7A1F13746D00E9F069 /* Meeting.swift */; };
 		9F35EA7D1F13789C00E9F069 /* MeetingTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F35EA7C1F13789C00E9F069 /* MeetingTableViewController.swift */; };
 		9F35EA7F1F13795400E9F069 /* MeetingTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F35EA7E1F13795400E9F069 /* MeetingTableViewCell.swift */; };
+		9FB568D41F172A810089CAA2 /* HomeModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FB568D31F172A810089CAA2 /* HomeModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,6 +45,7 @@
 		9F35EA7A1F13746D00E9F069 /* Meeting.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Meeting.swift; sourceTree = "<group>"; };
 		9F35EA7C1F13789C00E9F069 /* MeetingTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MeetingTableViewController.swift; sourceTree = "<group>"; };
 		9F35EA7E1F13795400E9F069 /* MeetingTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MeetingTableViewCell.swift; sourceTree = "<group>"; };
+		9FB568D31F172A810089CAA2 /* HomeModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -88,6 +90,7 @@
 				9F35EA5A1F136DAE00E9F069 /* AppDelegate.swift */,
 				9F35EA5C1F136DAE00E9F069 /* MeetingViewController.swift */,
 				9F35EA7A1F13746D00E9F069 /* Meeting.swift */,
+				9FB568D31F172A810089CAA2 /* HomeModel.swift */,
 				9F35EA5E1F136DAE00E9F069 /* Main.storyboard */,
 				9F35EA7C1F13789C00E9F069 /* MeetingTableViewController.swift */,
 				9F35EA7E1F13795400E9F069 /* MeetingTableViewCell.swift */,
@@ -216,6 +219,7 @@
 				9F35EA5D1F136DAE00E9F069 /* MeetingViewController.swift in Sources */,
 				9F35EA7B1F13746D00E9F069 /* Meeting.swift in Sources */,
 				9F0140FE1F14D80200A50B3B /* TagTableViewCell.swift in Sources */,
+				9FB568D41F172A810089CAA2 /* HomeModel.swift in Sources */,
 				9F35EA7D1F13789C00E9F069 /* MeetingTableViewController.swift in Sources */,
 				9F35EA7F1F13795400E9F069 /* MeetingTableViewCell.swift in Sources */,
 				9F35EA5B1F136DAE00E9F069 /* AppDelegate.swift in Sources */,
