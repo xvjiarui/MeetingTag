@@ -1,3 +1,4 @@
+// Not in use yet
 <?php
 $photoPath = "uploads/preview/" . $_POST["photoPath"]; 
 
