@@ -9,7 +9,7 @@ if (mysqli_connect_errno())
 	echo "Failed to connect to MySQL: " . mysqli_connect_error();
 }
 
-$sql = "SELECT * FROM Meetings";
+$sql = "SELECT Meeting.id, Meeting.title, Meeting.photoPath, Tag.second FROM Meeting JOIN MeetingTagRelation ON Meeting.id = MeetingTagRelation.meetingId JOIN Tag ON MeetingTagRelation.tagId = Tag.id";
 
 if ($result = mysqli_query($con, $sql))
 {

@@ -20,7 +20,7 @@ class HomeModel: NSObject {
     
     weak var delegate: HomeModelProtocol!
     
-    let urlPath = "https://minutes.000webhostapp.com/service.php"
+    let urlPath = "https://minutes.000webhostapp.com/downloadInfo.php"
     func downloadItems() {
         
         let url: URL = URL(string: urlPath)!
@@ -59,18 +59,29 @@ class HomeModel: NSObject {
         
         for i in 0 ..< jsonResult.count
         {
-            
             jsonElement = jsonResult[i] as! NSDictionary
             
             
             //the following insures none of the JsonElement values are nil through optional binding
-            if let title = jsonElement["Title"] as? String
-            {
-//                let meeting = Meeting(title: title, photo: nil, tags: [Int]())
-//                meetings.add(meeting)
-                print(title)
+            if let id = jsonElement["id"] as? NSString {
+                print(id)
+                let idx = Int(id.intValue)
+                if idx < meetings.count {
+                    if let second = jsonElement["second"] as? NSString{
+                        let nextTag = Int(second.intValue)
+                        (meetings[idx] as! Meeting).tags.append(nextTag)
+                    }
+                }
+                else
+                {
+                    if let title = jsonElement["title"] as? String, let second = jsonElement["second"] as? NSString, let photoPath = jsonElement["photoPath"] as? String
+                    {
+                        let firstTag = Int(second.intValue)
+                        print(title)
+                        meetings.add(Meeting(title: title, photo: nil, tags: [firstTag]))
+                    }
+                }
             }
-            
         }
         
         DispatchQueue.main.async(execute: { () -> Void in

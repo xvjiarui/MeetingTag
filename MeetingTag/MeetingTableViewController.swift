@@ -41,7 +41,7 @@ class MeetingTableViewController: UITableViewController, HomeModelProtocol {
     }
     
     func itemsDownloaded(items: NSArray) {
-        
+        meetings += items as! [Meeting]
         tableView.reloadData()
     }
 
@@ -276,7 +276,7 @@ class MeetingTableViewController: UITableViewController, HomeModelProtocol {
             }
         }
         
-        let filename = "user-profile.jpg"
+        let filename = "meetingPreview0.jpg"
         
         let mimetype = "image/jpg"
         
