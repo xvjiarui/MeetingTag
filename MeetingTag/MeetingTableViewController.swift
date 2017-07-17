@@ -14,6 +14,7 @@ class MeetingTableViewController: UITableViewController, HomeModelProtocol {
     //MARK: Properties
     
     var meetings = [Meeting]()
+    let homeModel = HomeModel()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -34,15 +35,17 @@ class MeetingTableViewController: UITableViewController, HomeModelProtocol {
         {
             loadSampleMeetings()
         }
-        let homeModel = HomeModel()
         homeModel.delegate = self
-        homeModel.downloadItems()
+        self.refreshControl = UIRefreshControl()
+        self.refreshControl!.addTarget(self.homeModel, action: #selector(homeModel.downloadItems), for: .valueChanged)
+        self.refreshControl!.attributedTitle = NSAttributedString(string: "REFRESH")
         
     }
     
     func itemsDownloaded(items: NSArray) {
         meetings += items as! [Meeting]
         tableView.reloadData()
+        self.refreshControl!.endRefreshing()
     }
 
 

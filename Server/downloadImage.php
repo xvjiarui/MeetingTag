@@ -1,6 +1,6 @@
-// Not in use yet
 <?php
-$photoPath = "uploads/preview/" . $_POST["photoPath"]; 
+// Not in use yet
+$photoPath = "uploads/preview/" . $_GET["photoPath"]; 
 
 if(file_exists($photoPath))
 {

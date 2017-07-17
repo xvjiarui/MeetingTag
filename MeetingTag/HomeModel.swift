@@ -76,9 +76,13 @@ class HomeModel: NSObject {
                 {
                     if let title = jsonElement["title"] as? String, let second = jsonElement["second"] as? NSString, let photoPath = jsonElement["photoPath"] as? String
                     {
+                        var photo: UIImage?
+                        let url = URL(string: "https://minutes.000webhostapp.com/downloadImage.php?photoPath=" + photoPath)
+                        let data = try? Data(contentsOf: url!)
+                        photo = UIImage(data: data!)
                         let firstTag = Int(second.intValue)
                         print(title)
-                        meetings.add(Meeting(title: title, photo: nil, tags: [firstTag]))
+                        meetings.add(Meeting(title: title, photo: photo, tags: [firstTag]))
                     }
                 }
             }
