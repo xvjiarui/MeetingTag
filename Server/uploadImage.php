@@ -1,9 +1,9 @@
 <?php
 $firstName = $_POST["firstName"];
 $lastName = $_POST["lastName"];
-$userId = $_POST["userId"];
+$meetingId = $_POST["meetingId"];
 
-$target_dir = "uploads/preview/" . $userId;
+$target_dir = "uploads/preview";
 if(!file_exists($target_dir))
 {
 	mkdir($target_dir, 0777, true);
@@ -16,7 +16,7 @@ if (move_uploaded_file($_FILES["file"]["tmp_name"], $target_dir))
 	echo json_encode([
 		"Message" => "The file ". basename( $_FILES["file"]["name"]). " has been uploaded.",
 		"Status" => "OK",
-		"userId" => $_REQUEST["userId"]]);
+		"meetingId" => $_REQUEST["meetingId"]]);
 
 } 
 else {
@@ -24,7 +24,7 @@ else {
 	echo json_encode([
 		"Message" => "Sorry, there was an error uploading your file.",
 		"Status" => "Error",
-		"userId" => $_REQUEST["userId"]
+		"meetingId" => $_REQUEST["meetingId"]
 	]);
 }
 ?>
